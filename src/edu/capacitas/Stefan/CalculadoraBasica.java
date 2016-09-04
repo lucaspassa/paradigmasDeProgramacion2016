@@ -1,17 +1,12 @@
-/**
+package edu.capacitas.Stefan; /**
  * Created by Stefan on 29/08/2016.
  */
 import java.util.Scanner;
 public class CalculadoraBasica {
-    public static void main(String args[]) {
 
+    public static void main(String args[]) {
         Scanner operador = new Scanner(System.in);
-        System.out.println("Calculadora básica:");
-        System.out.println("1) Sumar");
-        System.out.println("2) Restar");
-        System.out.println("3) Multiplicar");
-        System.out.println("4) Dividir:");
-        System.out.println("Ingrese operación");
+        mostrarMenu();
         int operacion = operador.nextInt();
         if (!(operacion >= 1 && operacion <= 4)) {
             System.out.println("Operación inválida");
@@ -32,5 +27,14 @@ public class CalculadoraBasica {
             }
             System.out.println("Resultado: " + resultado);
         }
+    }
+
+    public static void mostrarMenu() {
+        System.out.println("Calculadora básica:");
+        System.out.println("1) Sumar");
+        System.out.println("2) Restar");
+        System.out.println("3) Multiplicar");
+        System.out.println("4) Dividir:");
+        System.out.println("Ingrese operación");
     }
 }
