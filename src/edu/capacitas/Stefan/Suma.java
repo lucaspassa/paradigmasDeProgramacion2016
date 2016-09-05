@@ -1,3 +1,5 @@
+package edu.capacitas.Stefan;
+
 import java.util.Scanner;
 
 public class Suma {

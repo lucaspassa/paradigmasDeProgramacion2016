@@ -1,14 +1,17 @@
-package edu.capacitas.Stefan; /**
- * Created by Stefan on 29/08/2016.
- */
+package edu.capacitas.federico;
+
 import java.util.Scanner;
 
-public class DatosTeclado {
+public class Suma {
     public static void main(String args[]){
         Scanner lector = new Scanner(System.in);
+        int a = lector.nextInt();
+        int b = lector.nextInt();
         String nombre = lector.nextLine();
         lector.close();
-        System.out.println("Mi nombre es " + nombre);
+        int suma = a+b;
+        System.out.println("La suma es " + suma);
+
     }
 
 }
