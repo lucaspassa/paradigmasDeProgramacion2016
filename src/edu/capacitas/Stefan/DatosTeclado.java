@@ -1,4 +1,4 @@
-/**
+package edu.capacitas.Stefan; /**
  * Created by Stefan on 29/08/2016.
  */
 import java.util.Scanner;
