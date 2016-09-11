@@ -12,16 +12,15 @@ public class Calculadora2 {
 
         float operando=0;
         float resultado = 0;
-        int ejecutar=1;
+        int ctdnumeros=0;
         int operacion=0;
-        String otracuenta;
-        int ctdnumeros;
+
 
         do {
             mostrarMenu();
             operacion = pedirOperacion();
-            ctdnumeros = pedirCtdNumeros();
-            for (int i = 1; i <= ctdnumeros; i++) {
+            ctdnumeros =  pedirCtdNumeros();
+            for (int i = 1; i <= 2; i++) {
                 operando = pedirNumero(i);
                 switch (operacion) {
                     case 1:
@@ -51,27 +50,31 @@ public class Calculadora2 {
     } while( OtraCuenta());
 }
 
-    public static void mostrarMenu() {
-        System.out.println("Calculadora2:");
-        System.out.println("1) Sumar");
-        System.out.println("2) Restar");
-        System.out.println("3) Multiplicar");
-        System.out.println("4) Dividir");
-        return;
-    }
 
     public static int pedirCtdNumeros() {
-        String ctdnumeros;
-        Scanner operador = new Scanner(System.in);
-        System.out.println("Ctd. de números?");
-        ctdnumeros = operador.next();
-        while ( !isNumeric(ctdnumeros) || Integer.parseInt(ctdnumeros)<=0 ) {
-            System.out.println("Entrada inválida");
-            ctdnumeros = operador.next();
-        }
-        //operador.close();
+        boolean ok;
+        String ctdnumeros="";
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese Cantidad de números:");
+        do {
+            ctdnumeros = sc.next();
+            if(!isNumeric(ctdnumeros) ){
+                ok=false;
+                System.out.println("Cantidad de nros debe ser numérico.");}
+            else if (Integer.parseInt(ctdnumeros) < 1) {
+                ok=false;
+                System.out.println("Cantidad de nros debe ser positivo.");
+            }
+            else {
+                ok = true;
+            }
+        } while (!ok);
+
+        sc.close();
         return Integer.parseInt(ctdnumeros);
     }
+
 
     public static float pedirNumero(int i) {
         String numero;
@@ -86,15 +89,26 @@ public class Calculadora2 {
         return Float.parseFloat(numero);
     }
 
+
     public static int pedirOperacion() {
+        boolean ok;
         String operacion;
         Scanner operador = new Scanner(System.in);
         System.out.println("Ingrese operación:");
-        operacion = operador.next();
-        while ( !isNumeric(operacion) || Integer.parseInt(operacion)<=0 || Integer.parseInt(operacion)>4  ) {
-            System.out.println("Operacion inválida");
+
+        do {
             operacion = operador.next();
-        }
+            if(!isNumeric(operacion) ){
+                ok=false;
+                System.out.println("Operacion de 1 a 4");}
+            else if (Integer.parseInt(operacion)<1 || Integer.parseInt(operacion)>4) {
+                ok=false;
+                System.out.println("Operacion de 1 a 4");
+            }
+            else {
+                ok = true;
+            }
+        } while (!ok);
         operador.close();
         return Integer.parseInt(operacion);
     }
@@ -126,5 +140,14 @@ public class Calculadora2 {
         } catch (NumberFormatException nfe){
             return false;
         }
+    }
+
+    public static void mostrarMenu() {
+        System.out.println("Calculadora2:");
+        System.out.println("1) Sumar");
+        System.out.println("2) Restar");
+        System.out.println("3) Multiplicar");
+        System.out.println("4) Dividir");
+        return;
     }
 }
