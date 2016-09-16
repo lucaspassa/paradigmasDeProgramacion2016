@@ -19,8 +19,7 @@ public class Calculadora2 {
         do {
             mostrarMenu();
             operacion = pedirOperacion();
-            ctdnumeros =  pedirCtdNumeros();
-            for (int i = 1; i <= 2; i++) {
+            for (int i = 1; i <= ctdnumeros; i++) {
                 operando = pedirNumero(i);
                 switch (operacion) {
                     case 1:

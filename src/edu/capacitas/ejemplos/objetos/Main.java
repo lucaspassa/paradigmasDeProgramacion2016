@@ -11,10 +11,10 @@ public class Main {
 
         perroLucas.setRaza("Doberman");
         perroLucas.setCantidadPatas(2);
-
         perroStefan.setRaza("Caniche");
 
         System.out.println(perroLucas.getRaza());
+        System.out.println(perroLucas.getCantidadPatas());
         System.out.println(perroStefan.getRaza());
 
     }
