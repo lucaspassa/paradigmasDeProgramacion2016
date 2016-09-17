@@ -8,7 +8,9 @@ import java.util.Scanner;
 
 public class Calculadora2 {
 
-    public static void main(String args[]) {
+    Scanner teclado = new Scanner(System.in);
+
+    public static int main(String args[]) {
 
         float operando=0;
         float resultado = 0;
@@ -19,6 +21,7 @@ public class Calculadora2 {
         do {
             mostrarMenu();
             operacion = pedirOperacion();
+            ctdnumeros = pedirCtdNumeros();
             for (int i = 1; i <= ctdnumeros; i++) {
                 operando = pedirNumero(i);
                 switch (operacion) {
@@ -47,17 +50,21 @@ public class Calculadora2 {
             System.out.println("Resultado: " + resultado);
 
     } while( OtraCuenta());
+        return 0;
 }
 
 
-    public static int pedirCtdNumeros() {
+
+
+ }
+
+    private int pedirCtdNumeros() {
         boolean ok;
         String ctdnumeros="";
 
-        Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese Cantidad de números:");
         do {
-            ctdnumeros = sc.next();
+            ctdnumeros = this.teclado.next();
             if(!isNumeric(ctdnumeros) ){
                 ok=false;
                 System.out.println("Cantidad de nros debe ser numérico.");}
@@ -70,33 +77,32 @@ public class Calculadora2 {
             }
         } while (!ok);
 
-        sc.close();
         return Integer.parseInt(ctdnumeros);
     }
 
 
-    public static float pedirNumero(int i) {
+    private float pedirNumero(int i) {
         String numero;
-        Scanner operador = new Scanner(System.in);
+
         System.out.println("Ingrese número " + i);
-        numero = operador.next();
+        numero = this.teclado.next();
         while ( !isNumeric(numero)) {
             System.out.println("Entrada inválida");
-            numero = operador.next();
+            numero = this.teclado.next();
         }
-        operador.close();
+
         return Float.parseFloat(numero);
     }
 
 
-    public static int pedirOperacion() {
+    private int pedirOperacion() {
         boolean ok;
         String operacion;
-        Scanner operador = new Scanner(System.in);
+
         System.out.println("Ingrese operación:");
 
         do {
-            operacion = operador.next();
+            operacion = this.teclado.next();
             if(!isNumeric(operacion) ){
                 ok=false;
                 System.out.println("Operacion de 1 a 4");}
@@ -108,23 +114,22 @@ public class Calculadora2 {
                 ok = true;
             }
         } while (!ok);
-        operador.close();
         return Integer.parseInt(operacion);
     }
 
-    //TODO lalalal
-    public static boolean OtraCuenta() {
+
+    private boolean OtraCuenta() {
         String otracuenta;
-        Scanner operador = new Scanner(System.in);
+
         System.out.println("Quiere hacer otra cuenta? (s/n)");
 
-        otracuenta = operador.next();
-        //FIXME hacer tal cosa para que ande mejor
+        otracuenta = this.teclado.next();
+
         while ( !(otracuenta.equals("n") || !otracuenta.equals("s")) ) {
             System.out.println("Entrada inválida");
-            otracuenta = operador.next();
+            otracuenta = this.teclado.next();
         }
-        operador.close();
+
         if (otracuenta.equals("n")) {
             return false;
         }else {
@@ -141,7 +146,7 @@ public class Calculadora2 {
         }
     }
 
-    public static void mostrarMenu() {
+    private static void mostrarMenu() {
         System.out.println("Calculadora2:");
         System.out.println("1) Sumar");
         System.out.println("2) Restar");
