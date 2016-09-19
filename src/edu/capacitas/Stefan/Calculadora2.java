@@ -8,9 +8,14 @@ import java.util.Scanner;
 
 public class Calculadora2 {
 
-    Scanner teclado = new Scanner(System.in);
+    Scanner teclado;
 
-    public static int main(String args[]) {
+
+    public Calculadora2() {
+            this.teclado = new Scanner(System.in);
+    }
+
+    public static void main(String args[]) {
 
         float operando=0;
         float resultado = 0;
@@ -56,7 +61,7 @@ public class Calculadora2 {
 
 
 
- }
+
 
     private int pedirCtdNumeros() {
         boolean ok;
