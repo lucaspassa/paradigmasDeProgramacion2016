@@ -1,4 +1,4 @@
-package edu.capacitas.Stefan;
+package edu.capacitas.Stefan.calculadora;
 
 import java.util.Scanner;
 
@@ -12,10 +12,11 @@ public class Calculadora2 {
 
 
     public Calculadora2() {
-            this.teclado = new Scanner(System.in);
+
+        this.teclado = new Scanner(System.in);
     }
 
-    public static void main(String args[]) {
+    public void Calcu() {
 
         float operando=0;
         float resultado = 0;
@@ -55,7 +56,6 @@ public class Calculadora2 {
             System.out.println("Resultado: " + resultado);
 
     } while( OtraCuenta());
-        return 0;
 }
 
 
@@ -130,7 +130,7 @@ public class Calculadora2 {
 
         otracuenta = this.teclado.next();
 
-        while ( !(otracuenta.equals("n") || !otracuenta.equals("s")) ) {
+        while ( !(otracuenta.equals("n") || otracuenta.equals("s")) ) {
             System.out.println("Entrada inválida");
             otracuenta = this.teclado.next();
         }
