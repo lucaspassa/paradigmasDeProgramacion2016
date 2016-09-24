@@ -11,7 +11,7 @@ public class Casa {
     }
 
     public String getColor() {
-        return color;
+        return this.color;
     }
 
     public void setColor(String color) {
