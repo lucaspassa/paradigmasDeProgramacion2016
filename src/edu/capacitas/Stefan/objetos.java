@@ -10,7 +10,7 @@ class testObjetos {
         Perro perroStefan = new Perro();
 
         perroLucas.setRaza("Doberman");
-        perroLucas.setCantidadPatas(2);
+        perroLucas.setCantidadPatas(Integer.valueOf(2));
         perroStefan.setRaza("Caniche");
 
         System.out.println(perroLucas.getRaza());
