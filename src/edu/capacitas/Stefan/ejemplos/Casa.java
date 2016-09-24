@@ -10,7 +10,7 @@ public class Casa {
         this.color="Blanco";
     }
 
-    public String getColor() {
+    public String  getColor() {
         return this.color;
     }
 
