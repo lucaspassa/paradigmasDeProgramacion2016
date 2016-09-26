@@ -20,8 +20,7 @@ public class Persona {
     public Persona() throws ParseException {
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombre() {return nombre;
     }
 
     public void setNombre(String nombre) {
