@@ -1,9 +1,10 @@
-package edu.capacitas.Stefan.persona;
+package edu.capacitas.federico.persona;
 
 /**
- * Created by Stefan on 24/09/2016.
+ * Created by Fede on 26/09/2016.
  */
 public class Persona {
+
     private String nombre;
 
     public String getNombre() {return nombre;
