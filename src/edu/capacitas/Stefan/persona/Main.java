@@ -11,25 +11,61 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) throws ParseException {
-        Persona persona = new Persona();
-        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/mm/yyyy");
-        Date fechaNacimiento= formatoFecha.parse("19/05/1978");
+        Persona persona1 = new Persona();
+        Persona persona2 = new Persona();
+        Persona persona3 = new Persona();
+
         System.out.println("Valores de las variables");
-        persona.setNombre("Stefan");
-        persona.setApellido("Ronacher");
-        persona.setDni("92844240");
-        persona.setTelefono("154301742");
-        persona.setEdad(38);
-        persona.setFechaNacimiento(fechaNacimiento);
-        System.out.println(persona.getNombre());
-        System.out.println(persona.getApellido());
-        System.out.println(persona.getDni());
-        System.out.println(persona.getTelefono());
-        System.out.println(persona.getEdad());
 
-        Date fecha=persona.getFechaNacimiento();
-        System.out.println(formatoFecha.format(fecha));
+        System.out.println("\n\rPersona 1");
+        SimpleDateFormat formatoFecha1 = new SimpleDateFormat("dd/mm/yyyy");
+        Date fechaNacimiento1= formatoFecha1.parse("19/05/1978");
+        persona1.setNombre("Stefan");
+        persona1.setApellido("Ronacher");
+        persona1.setDni("92844240");
+        persona1.setTelefono("154301742");
+        persona1.setEdad(38);
+        persona1.setFechaNacimiento(fechaNacimiento1);
+        System.out.println(persona1.getNombre());
+        System.out.println(persona1.getApellido());
+        System.out.println(persona1.getDni());
+        System.out.println(persona1.getTelefono());
+        System.out.println(persona1.getEdad());
+        Date fecha=persona1.getFechaNacimiento();
+        System.out.println(formatoFecha1.format(fecha));
 
+        System.out.println("\n\rPersona 2");
+        SimpleDateFormat formatoFecha2 = new SimpleDateFormat("dd/mm/yyyy");
+        Date fechaNacimiento2= formatoFecha2.parse("20/03/2013");
+        persona2.setNombre("Pablo");
+        persona2.setApellido("Rodríguez");
+        persona2.setDni("45000000");
+        persona2.setTelefono("154122334");
+        persona2.setEdad(6);
+        persona2.setFechaNacimiento(fechaNacimiento2);
+        System.out.println(persona2.getNombre());
+        System.out.println(persona2.getApellido());
+        System.out.println(persona2.getDni());
+        System.out.println(persona2.getTelefono());
+        System.out.println(persona2.getEdad());
+        Date fecha2=persona2.getFechaNacimiento();
+        System.out.println(formatoFecha2.format(fecha2));
 
+        System.out.println("\n\rPersona 3");
+        SimpleDateFormat formatoFecha3 = new SimpleDateFormat("dd/mm/yyyy");
+        Date fechaNacimiento3= formatoFecha3.parse("20/03/1950");
+        persona3.setNombre("Ariel");
+        persona3.setApellido("Ramírez");
+        persona3.setDni("29000123");
+        persona3.setTelefono("154099112");
+        persona3.setEdad(50);
+        persona3.setFechaNacimiento(fechaNacimiento3);
+        System.out.println(persona3.getNombre());
+        System.out.println(persona3.getApellido());
+        System.out.println(persona3.getDni());
+        System.out.println(persona3.getTelefono());
+        System.out.println(persona3.getEdad());
+        Date fecha3=persona3.getFechaNacimiento();
+        System.out.println(formatoFecha3.format(fecha3));
     }
 }
