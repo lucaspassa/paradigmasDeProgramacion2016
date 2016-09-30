@@ -15,12 +15,10 @@ public class Persona {
     private int edad;
     private Date fechaNacimiento;
 
-
-
     public Persona() throws ParseException {
     }
 
-    public String getNombre() {return nombre;
+    public String getNombre() {return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -28,7 +26,7 @@ public class Persona {
     }
 
     public String getApellido() {
-        return apellido;
+        return this.apellido;
     }
 
     public void setApellido(String apellido) {
@@ -36,7 +34,7 @@ public class Persona {
     }
 
     public String getDni() {
-        return dni;
+        return this.dni;
     }
 
     public void setDni(String dni) {
@@ -44,7 +42,7 @@ public class Persona {
     }
 
     public String getTelefono() {
-        return telefono;
+        return this.telefono;
     }
 
     public void setTelefono(String telefono) {
@@ -52,7 +50,7 @@ public class Persona {
     }
 
     public int getEdad() {
-        return edad;
+        return this.edad;
     }
 
     public void setEdad(int edad) {
@@ -60,7 +58,7 @@ public class Persona {
     }
 
     public Date getFechaNacimiento() {
-        return fechaNacimiento;
+        return this.fechaNacimiento;
     }
 
     public void setFechaNacimiento(Date fechaNacimiento) {

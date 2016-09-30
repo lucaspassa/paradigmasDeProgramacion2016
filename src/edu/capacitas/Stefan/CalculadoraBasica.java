@@ -102,12 +102,17 @@ public class CalculadoraBasica {
         System.out.println("4) Dividir:");
     }
     private static boolean isNumeric(String cadena){
-        try {
+       try {
             Integer.parseInt(cadena);
             return true;
         } catch (NumberFormatException nfe){
             return false;
         }
+       /*if (Integer.parseInt(cadena)>0) {
+           return true;
+       }else{
+           return false;
+       }*/
     }
 }
 
