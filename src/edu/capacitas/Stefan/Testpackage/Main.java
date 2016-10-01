@@ -1,19 +1,16 @@
-package edu.capacitas.Stefan.persona;
-
+package edu.capacitas.Stefan.Testpackage;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by Stefan on 24/09/2016.
+ * Created by Stefan on 30/09/2016.
  */
-
 public class Main {
-
     public static void main(String[] args) throws ParseException {
-        Persona persona1 = new Persona();
-        Persona persona2 = new Persona();
-        Persona persona3 = new Persona();
+        Test persona1 = new Test();
+        Test persona2 = new Test();
+        Test persona3 = new Test();
 
         System.out.println("Valores de las variables");
 
@@ -68,4 +65,5 @@ public class Main {
         Date fecha3=persona3.getFechaNacimiento();
         System.out.println(formatoFecha3.format(fecha3));
     }
+
 }
