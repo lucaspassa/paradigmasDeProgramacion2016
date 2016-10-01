@@ -36,6 +36,5 @@ public class AppPersona {
         Date fecha = persona.getFechaNacimiento();
         System.out.println(dateFormat.format(fecha));
 
-
     }
 }
