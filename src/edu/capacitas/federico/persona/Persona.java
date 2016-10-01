@@ -1,5 +1,6 @@
 package edu.capacitas.federico.persona;
 
+import java.text.ParseException;
 import java.util.Date;
 
 /**
@@ -12,6 +13,10 @@ public class Persona {
     private String telefono;
     private int edad;
     private Date fechaNacimiento;
+
+    public Persona () throws ParseException{
+
+    }
 
     public String getNombre() {
         return nombre;
