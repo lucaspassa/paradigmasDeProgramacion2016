@@ -10,6 +10,9 @@ public class Contacto {
     private int edad;
     private String email;
 
+
+
+
     public long getId() {
         return this.id;
     }
