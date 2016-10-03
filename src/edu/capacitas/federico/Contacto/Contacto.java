@@ -7,15 +7,24 @@ import com.sun.xml.internal.bind.v2.model.core.ID;
  */
 public class Contacto {
 
-    private ID Long;
+    //private ID Long;
+    private Long idContacto;
+
     private String nombre;
     private String telefono;
     private int edad;
     private String email;
 
+//    public ID getLong() {return Long;}
+//    public void setLong(ID Long) { this.Long = Long; }
 
-    public ID getLong() {return Long;}
-    public void setLong(ID Long) { this.Long = Long; }
+    public Long getIdContacto() {
+        return idContacto;
+    }
+
+    public void setIdContacto(Long idContacto) {
+        this.idContacto = idContacto;
+    }
 
     public String getnombre() {return nombre;}
     public void setnombre(String nombre) { this.nombre = nombre; }
