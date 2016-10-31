@@ -1,5 +1,7 @@
 package edu.capacitas;
 
+import java.util.Calendar;
+
 // Declaración de inicio de Clase
 public class Main {
 
@@ -19,7 +21,7 @@ public class Main {
         long enteroLargo = 1000;
 
         // Sacar por pantalla el valor de
-        System.out.println("El valor del entero es :" + entero);
+        System.out.println("El valor del entero es :" + entero + " Hola chau");
 
         System.out.println("El valor del entero largo es: " + enteroLargo);
 
@@ -27,6 +29,9 @@ public class Main {
 
         System.out.println("El nuevo valor del entero anterior sumado a su mismo valor es " + entero);
 
+        /* fechas */
+        Calendar.getInstance();
+        System.out.println("Fin");
 
     }
 }
